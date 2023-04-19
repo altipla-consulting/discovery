@@ -4,8 +4,8 @@ import (
 	"context"
 	"os"
 
+	"github.com/altipla-consulting/errors"
 	"libs.altipla.consulting/env"
-	"libs.altipla.consulting/errors"
 	"libs.altipla.consulting/rdb"
 	"libs.altipla.consulting/secrets"
 )
