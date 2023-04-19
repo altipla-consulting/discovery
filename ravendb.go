@@ -2,9 +2,9 @@ package discovery
 
 import (
 	"context"
+	"fmt"
 	"os"
 
-	"github.com/altipla-consulting/errors"
 	"libs.altipla.consulting/env"
 	"libs.altipla.consulting/rdb"
 	"libs.altipla.consulting/secrets"
@@ -21,7 +21,7 @@ func OpenRavenDB(dbname string, opts ...rdb.OpenOption) (*rdb.Database, error) {
 
 	credentials, err := secrets.NewValue(context.Background(), "ravendb-client-credentials")
 	if err != nil {
-		return nil, errors.Trace(err)
+		return nil, fmt.Errorf("cannot read credentials secret: %w", err)
 	}
 	return rdb.OpenSecret(credentials, dbname, opts...)
 }

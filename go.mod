@@ -3,7 +3,6 @@ module github.com/altipla-consulting/discovery
 go 1.18
 
 require (
-	github.com/altipla-consulting/errors v1.2.2
 	github.com/sirupsen/logrus v1.9.0
 	libs.altipla.consulting v1.185.0
 )
@@ -14,6 +13,7 @@ require (
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	cloud.google.com/go/iam v0.12.0 // indirect
 	cloud.google.com/go/secretmanager v1.10.0 // indirect
+	github.com/altipla-consulting/errors v1.2.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
